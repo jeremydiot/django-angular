@@ -2,7 +2,7 @@
   //general
   "python.disableInstallationCheck": true,
   "python.terminal.activateEnvInCurrentTerminal": true,
-  "python.defaultInterpreterPath": "${workspaceFolder}/env/bin/python",
+  "python.defaultInterpreterPath": "${workspaceFolder}/env/bin/python3.8",
   "files.autoSave": "off",
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,

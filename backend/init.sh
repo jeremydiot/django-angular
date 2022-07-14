@@ -2,7 +2,7 @@
 
 ENV_PATH="env/"
 
-[ ! -d $ENV_PATH ] && python3 -m venv env
+[ ! -d $ENV_PATH ] && python3.8 -m venv env
 
 echo "set -a && source .env && set +a">> env/bin/activate
 
