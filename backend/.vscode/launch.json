@@ -12,9 +12,6 @@
       "args": [
         "runserver",
         "8080",
-        //"--noreload",
-        // "--nothreading",
-        // "--insecure"
       ],
       "django": true,
       "justMyCode": true
