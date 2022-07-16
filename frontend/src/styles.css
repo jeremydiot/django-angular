@@ -1,0 +1,17 @@
+html,
+body {
+  display: block;
+  height: 100%;
+  margin: 0;
+}
+
+* {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+app-root {
+  display: flex;
+  height: 100%;
+  flex-flow: column;
+  /* flex-direction: column; */
+}

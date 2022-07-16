@@ -1,0 +1,16 @@
+mat-sidenav-container {
+  height: 100%;
+}
+
+mat-sidenav-content {
+  display: flex;
+  flex-flow: column;
+}
+
+app-main {
+  flex: 1 1 auto;
+}
+
+app-footer {
+  flex: 0 1 auto;
+}

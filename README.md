@@ -5,9 +5,11 @@ django angular stack template
 - Debian
 - VsCode
 ## os requirements
-- Python3.8
+- Python 3.8
 - libpq-dev
 - Docker
 - docker-compose
+- nodejs 16
+- angular
 ## python requirements
 - virtualenv

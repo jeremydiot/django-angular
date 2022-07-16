@@ -1,0 +1,7 @@
+app-navbar {
+  flex: 0 1 auto;
+}
+
+app-sidebar {
+  flex: 1 1 auto;
+}
