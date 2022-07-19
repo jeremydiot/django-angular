@@ -3,3 +3,5 @@ djangorestframework
 psycopg2
 pyyaml 
 uritemplate
+djangorestframework-simplejwt
+drf-spectacular

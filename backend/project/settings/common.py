@@ -24,20 +24,27 @@ APPS_DIR = BASE_DIR / 'apps'
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if os.environ.get('DJANGO_EXECUTION_ENVIRONMENT') == "development" else False
+DEBUG = True if os.environ.get('DJANGO_EXECUTION_ENVIRONMENT') == 'development' else False
 
-ALLOWED_HOSTS = ['*'] if os.environ.get('DJANGO_EXECUTION_ENVIRONMENT') == "production" else []
+ALLOWED_HOSTS = ['*'] if os.environ.get('DJANGO_EXECUTION_ENVIRONMENT') == 'production' else []
 
 # Application definition
 
 INSTALLED_APPS = [
+    # base
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # additional libraries
     'rest_framework',
+    'rest_framework_simplejwt',
+    'drf_spectacular',
+
+    # custom apps
     'apps.main'
 ]
 
@@ -56,7 +63,7 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -129,6 +136,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-    ]
+        'rest_framework.permissions.IsAuthenticated'
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication'
+    ),
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema'
 }
