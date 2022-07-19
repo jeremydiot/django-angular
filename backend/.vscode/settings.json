@@ -31,7 +31,7 @@
     "--load-plugins",
     "pylint_django.checkers.migrations",
     "--django-settings-module=project.settings.common",
-    "--disable=missing-module-docstring,missing-class-docstring,missing-function-docstring,import-outside-toplevel"
+    "--disable=missing-module-docstring,missing-class-docstring,missing-function-docstring,import-outside-toplevel,line-too-long"
   ],
   //formatting autopep8
   "python.formatting.provider": "autopep8",
